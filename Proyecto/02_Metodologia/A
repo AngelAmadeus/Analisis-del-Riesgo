@@ -3,11 +3,11 @@ clear
 clc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Montos = [100000 , 100000 , 300000];                            %matriz de montos
-Sigma = [0.033007049 , 0.010217665 , 0.02008644];               %matriz de desviaci髇 estandar
+Sigma = [0.033007049 , 0.010217665 , 0.02008644];               %matriz de desviaci贸n estandar
 Rendprom = [-0.005340735 , -0.000976682 , -0.0007064];          %matriz de rendimientos promedio
 matcorr = [1,0.6987531846,0.21962612328;
            0.6987531846,1,0.32254474919;
-           0.21962612328,0.32254474919,1];                      %matriz de correlaci髇
+           0.21962612328,0.32254474919,1];                      %matriz de correlaci贸n
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 T=1;                                 %Timepo final
 n=1;                                 %Numero de incrementos de tiempo
@@ -18,23 +18,23 @@ trayImprimir = 20;                   %Imprimir 250 trayectorias
 t=0:dt:dt*(n);                       %forma en que se van dando los inrementos de tiempo
 ultimaCol = (length(t));             %longitud del tiempo, es la ultima columna
 
-S1=zeros(N,(n+1));                   %Matriz de tama駉 N,n+1 con ceros para meter los resultados del activo 1
+S1=zeros(N,(n+1));                   %Matriz de tama帽o N,n+1 con ceros para meter los resultados del activo 1
 Xo1=.99;                             %Precio inicial del Activo 1
 S1(:,1) = Xo1;                       %Se mete el valor inicial del activo 1 en la primera columna
 Rend1=-0.005340735;                  %Promedio de Rendimientos del Activo 1
-Desvest1=0.033007049;                %Desviaci髇 estandar de los rendimientos del Activo 1
+Desvest1=0.033007049;                %Desviaci贸n estandar de los rendimientos del Activo 1
 
-S2=zeros(N,(n+1));                   %Matriz de tama駉 N,n+1 con ceros para meter los resultados del activo 2
+S2=zeros(N,(n+1));                   %Matriz de tama帽o N,n+1 con ceros para meter los resultados del activo 2
 Xo2=43.25;                           %Precio inicial del Activo 2
 S2(:,1) = Xo2;                       %Se mete el valor inicial del activo 2 en la primera columna
 Rend2=-0.000976682;                  %Promedio de Rendimientos del Activo 2
-Desvest2=0.010217665;                %Desviaci髇 estandar de los rendimientos del Activo 2
+Desvest2=0.010217665;                %Desviaci贸n estandar de los rendimientos del Activo 2
 
-S3=zeros(N,(n+1));                   %Matriz de tama駉 N,n+1 con ceros para meter los resultados del activo 3
+S3=zeros(N,(n+1));                   %Matriz de tama帽o N,n+1 con ceros para meter los resultados del activo 3
 Xo3=1.5;                             %Precio inicial del Activo 3
 S3(:,1) = Xo3;                       %Se mete el valor inicial del activo 3 en la primera columna
 Rend3=-0.0007064;                    %Promedio de Rendimientos del Activo 3
-Desvest3=0.02008644;                 %Desviaci髇 estandar de los rendimientos del Activo 3
+Desvest3=0.02008644;                 %Desviaci贸n estandar de los rendimientos del Activo 3
 
 matcorr = [1,0.69875318466701,0.219626123281827;
            0.69875318466701,1,0.322544749197685;
